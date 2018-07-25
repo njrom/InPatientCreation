@@ -5,7 +5,7 @@ import sys
 
 
 USERNAME = "ADTADM"
-DEPARTMENT = "HH Admitting"
+DEPARTMENT = "SMH Admitting"
 
 
 def main():
@@ -29,7 +29,7 @@ def main():
         wait(2)
 
         addEncounterInfo(patient)
-        addHospitalAccount(patient)=
+        addHospitalAccount(patient)
 
         wait(2)
         click("Admit.png")
@@ -112,7 +112,8 @@ def addDemographics(patient):
 
 
 def addPCP(patient):
-    wait("PatientCareTeam.png", 30)  # Patient Care Team
+    wait(3)  # Patient Care Team
+    click("addPCP.png")
     wait(1)
     type(patient["pcp"] + Key.ENTER)
     wait("SearchPCP.png", 30)  # Wait until search is completed
